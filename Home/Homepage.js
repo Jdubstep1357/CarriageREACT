@@ -5,6 +5,9 @@ const MainText = () => {
    return(
     
         <View>
+
+
+
             <View style={styles.container} />
      
             <Text style={styles.HeaderText}>
@@ -78,7 +81,7 @@ const MainText = () => {
 
     const styles = StyleSheet.create({
         container: {
-            padding: 150,            
+            padding: 100,            
             borderColor: '#48b74e',
             borderWidth: 5
         },
@@ -109,7 +112,7 @@ const MainText = () => {
             fontSize: 25,
             textAlign: 'center',
             marginTop: 5
-        }
+        },
     });
 
 export default MainText;

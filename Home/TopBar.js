@@ -1,10 +1,12 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, KeyboardAvoidingView } from 'react-native';
 
 const TopBar = () => {
    return(
-        <View style={styles.container}>
-        </View>
+
+
+            <View style={styles.container}>
+            </View>
    );
 }
 
