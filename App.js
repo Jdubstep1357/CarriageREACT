@@ -1,11 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import Homepage from './Home/Homepage';
 import TopBar from './Home/TopBar';
-import BottomNavigator from './Home/BotomNavigator';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { Locations } from './Home/Locations';
+
 
 /* 
 export default function App() {
@@ -22,8 +22,7 @@ export default function App() {
 }
 */
 
-//Home page all of the content of the homepage goes here
-//how to put in information on it
+
 function HomeScreen() {
   return (
     <ScrollView>
@@ -35,11 +34,10 @@ function HomeScreen() {
   );
 }
 
-//Locations page
-function SettingsScreen() {
+function Locations() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
+    <View>
+    <Locations />
     </View>
   );
 }
@@ -51,7 +49,7 @@ export default function App() {
                <NavigationContainer>
             <Tab.Navigator>
               <Tab.Screen name="Home" component={HomeScreen} />
-              <Tab.Screen name="Settings" component={SettingsScreen} />
+              <Tab.Screen name="Locations" component={Locations} />
             </Tab.Navigator>
           </NavigationContainer>
 

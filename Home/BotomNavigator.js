@@ -6,57 +6,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 
 
 
-/*
-const BottomNavigator = () => {
-   return(
-        <View style={[styles.container, {
-            flexDirection: "row"
-        }]}>
-            <View>
-                <Button
-                    title='Home'
-                    icon={
-                        <Icon 
-                            name='home'
-                            type='font-awesome'
-                            color='#fff'
-                            iconStyle={{marginRight: 10}}
-                        />
-                    }
-                />
-            </View>
 
-            <View>
-                <Button
-                    title='Locations'
-                    icon={
-                        <Icon 
-                            name='search-location'
-                            type='font-awesome'
-                            color='lightblue'
-                            iconStyle={{marginRight: 5}}
-                        />
-                    }
-                />
-            </View>
-            <View style={{flex: 2, backgroundColor: "orange"}}>
-                <Button title='ready to work?' styles={styles.text} onPress={() => Navigate.navigate('ReadyToWork')}></Button>
-            </View>
-        </View>      
-    );
-};
-
-    const styles = StyleSheet.create({
-        container: {
-            flex: 1,
-            marginTop: 200
-        },
-        text: {
-            fontSize: 20,
-            color: 'white'
-        }
-    });
-    */
 
    const HomeScreen = () => {
     return (
@@ -66,13 +16,7 @@ const BottomNavigator = () => {
     );
   }
   
-  const SettingsScreen = () => {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Settings!</Text>
-      </View>
-    );
-  }
+
   
   const Tab = createMaterialBottomTabNavigator();
   
