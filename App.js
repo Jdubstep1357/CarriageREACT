@@ -7,6 +7,8 @@ import BottomNavigator from './Home/BotomNavigator';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import LocationsScreen from './Home/Locations';
+import Location1Screen from './LocationsInfo/Location1';
+import { createStackNavigator } from '@react-navigation/stack';
 
 /* 
 export default function App() {
@@ -48,22 +50,34 @@ const Tab = createMaterialBottomTabNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
-        <Tab.Screen name="Locations" component={LocationsScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
-
-
-
-
+    <React.Fragment>
+      <MyStack />
+      <NavigationContainer>
+        <Tab.Navigator>
+          <Tab.Screen name="Home" component={HomeScreen} />
+          <Tab.Screen name="Settings" component={SettingsScreen} />
+          <Tab.Screen name="Locations" component={LocationsScreen} />
+          <Tab.Screen name="Location1" component={Location1Screen} />
+        </Tab.Navigator>
+      </NavigationContainer>
+    </React.Fragment>
 
   );
 }
 
+const Stack = createStackNavigator();
 
+function MyStack() {
+  return (
+    <NavigationContainer >
+      <Stack.Navigator initialRouteName="Locations">
+        <Stack.Screen name="Location1" component={Location1Screen} />
+        <Stack.Screen name="Locations" component={LocationsScreen}
+          options={{ headerShown: false }} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {

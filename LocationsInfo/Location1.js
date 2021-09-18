@@ -1,10 +1,9 @@
 import React from 'react';
 import { Text, View, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 
-function Location1() {
+function Location1Screen({ navigation }) {
   return (
-    <View>
-
+    <ScrollView>
       <View style={styles.container}>
         <Text>Location1</Text>
       </View>
@@ -29,7 +28,7 @@ function Location1() {
         <Text>Location6</Text>
       </View>
 
-    </View>
+    </ScrollView>
   );
 }
 
@@ -69,4 +68,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Location1;
+export default Location1Screen;

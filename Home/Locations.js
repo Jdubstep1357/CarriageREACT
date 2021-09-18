@@ -2,11 +2,12 @@ import React from 'react';
 import { Text, View, StyleSheet, Button, ScrollView, TouchableOpacity } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
+import Location1Screen from '../LocationsInfo/Location1';
 
+//I call the navigation function here 
 function LocationsScreen({ navigation }) {
   return (
     <View >
-      <MyStack />
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Text>Weird</Text>
       </View>
@@ -15,7 +16,7 @@ function LocationsScreen({ navigation }) {
         <Text>MA</Text>
         <Button
           title="Go to MA locations"
-          onPress={() => navigation.navigate('Location1')}
+          onPress={() => navigation.navigate('Location1Screen')}
         />
       </View>
 
@@ -31,53 +32,7 @@ function LocationsScreen({ navigation }) {
   );
 }
 
-function Location1({ navigation }) {
-  return (
-    <View>
 
-      <View style={styles.container}>
-        <Text>Location1</Text>
-        <Button
-          title="Go back"
-          onPress={() => navigation.navigate('LocationsScreen')}
-        />
-      </View>
-
-      <View style={styles.container}>
-        <Text>Location2</Text>
-      </View>
-
-      <View style={styles.container}>
-        <Text>Location3</Text>
-      </View>
-
-      <View style={styles.container}>
-        <Text>Location4</Text>
-      </View>
-
-      <View style={styles.container}>
-        <Text>Location5</Text>
-      </View>
-
-      <View style={styles.container}>
-        <Text>Location6</Text>
-      </View>
-
-    </View>
-  );
-}
-
-const Stack = createStackNavigator();
-
-function MyStack() {
-  return (
-    <NavigationContainer independent='true'>
-      <Stack.Navigator>
-        <Stack.Screen name="Location1" component={Location1} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
 
 const styles = StyleSheet.create({
   container: {
