@@ -7,7 +7,7 @@ import BottomNavigator from './Home/BotomNavigator';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import LocationsScreen from './Home/Locations';
-import Location1Screen from './LocationsInfo/Location1';
+import Location1Screen from './Home/Location1';
 import { createStackNavigator } from '@react-navigation/stack';
 
 /* 
