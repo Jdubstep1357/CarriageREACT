@@ -1,35 +1,17 @@
 import React from 'react';
 import { Text, View, StyleSheet, Button, ScrollView, TouchableOpacity } from 'react-native';
 
-function LocationOneScreen({ navigation }) {
+function LocationOneInfoScreen({ navigation }) {
   return (
     <ScrollView>
       <View style={styles.container}>
         <Text>MALocation1</Text>
-        <Button
-          title="Go to MA location One"
-          onPress={() => navigation.navigate({ name: 'InfoOneLocation' })}
-        />
       </View>
 
-      <View style={styles.container}>
-        <Text>MALocation2</Text>
-      </View>
-
-      <View style={styles.container}>
-        <Text>MALocation3</Text>
-      </View>
-
-      <View style={styles.container}>
-        <Text>MALocation4</Text>
-      </View>
-
-      <View style={styles.container}>
-        <Text>MALocation5</Text>
-      </View>
-
-      <View style={styles.container}>
-        <Text>MALocation6</Text>
+      <View>
+        <Text>
+          this is MA Location One. Ready to work here?
+        </Text>
       </View>
 
     </ScrollView>
@@ -72,4 +54,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LocationOneScreen;
+export default LocationOneInfoScreen;

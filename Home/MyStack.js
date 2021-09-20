@@ -7,6 +7,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import LocationsScreen from './Locations';
 import LocationOneScreen from './LocationOne';
 import { createStackNavigator } from '@react-navigation/stack';
+import LocationOneInfoScreen from './LocationOneInfo';
 
 <View>
   <LocationsScreen />
@@ -21,6 +22,7 @@ export default function MyStack() {
     <NavigationContainer independent="true">
       <Stack.Navigator initialRouteName="Locations">
         <Stack.Screen name="OneLocation" component={LocationOneScreen} />
+        <Stack.Screen name="InfoOneLocation" component={LocationOneInfoScreen} />
         <Stack.Screen name="Locations" component={LocationsScreen}
           options={{ headerShown: false }} />
       </Stack.Navigator>
