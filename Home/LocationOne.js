@@ -1,31 +1,31 @@
 import React from 'react';
 import { Text, View, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 
-function Location1Screen({ navigation }) {
+function LocationOneScreen({ navigation }) {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <Text>Location1</Text>
+        <Text>MALocation1</Text>
       </View>
 
       <View style={styles.container}>
-        <Text>Location2</Text>
+        <Text>MALocation2</Text>
       </View>
 
       <View style={styles.container}>
-        <Text>Location3</Text>
+        <Text>MALocation3</Text>
       </View>
 
       <View style={styles.container}>
-        <Text>Location4</Text>
+        <Text>MALocation4</Text>
       </View>
 
       <View style={styles.container}>
-        <Text>Location5</Text>
+        <Text>MALocation5</Text>
       </View>
 
       <View style={styles.container}>
-        <Text>Location6</Text>
+        <Text>MALocation6</Text>
       </View>
 
     </ScrollView>
@@ -68,4 +68,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Location1Screen;
+export default LocationOneScreen;

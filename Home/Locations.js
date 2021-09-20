@@ -2,13 +2,15 @@ import React from 'react';
 import { Text, View, StyleSheet, Button, ScrollView, TouchableOpacity } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-import Location1Screen from './Location1';
+import LocationOneScreen from './LocationOne';
+import MyStack from './MyStack';
 
 //I call the navigation function here 
 //Problem happens at line 19, no declaration is found
 function LocationsScreen({ navigation }) {
   return (
-    <View >
+    <ScrollView>
+
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Text>Weird</Text>
       </View>
@@ -17,7 +19,7 @@ function LocationsScreen({ navigation }) {
         <Text>MA</Text>
         <Button
           title="Go to MA locations"
-          onPress={() => navigation.navigate({ name: 'Location1Screen' })}
+          onPress={() => navigation.navigate({ name: 'OneLocation' })}
         />
       </View>
 
@@ -29,11 +31,15 @@ function LocationsScreen({ navigation }) {
         <Text>NH</Text>
       </View>
 
-    </View>
+    </ScrollView>
   );
 }
 
+<View>
+  <LocationOneScreen />
 
+  <MyStack />
+</View>
 
 const styles = StyleSheet.create({
   container: {
